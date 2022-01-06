@@ -2,21 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>�w����ĵ�</title>
+  <title>飛宇互联文档</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
 </head>
 <body>
+  <nav>
+    <a href="https://github.com/finnfy/fyconnect" target="_fy">GitHub</a>
+	<a href="https://gitee.com/finnfy/fyconnect-api" target="_fy">Gitee</a>
+	<a href="https://0fy0.com" target="_fy">飛之宇</a>
+	<a href="https://weibo.com/420318184/" target="_fy">微博</a>
+  </nav>
   <div id="app"></div>
   <script>
     window.$docsify = {
-      name: '',
-      repo: ''
+      name: '飛宇互联接口使用文档',
+      repo: '',
+	  coverpage: true,
+	  onlyCover: true,
+	  search: {
+        maxAge: 86400000,               
+        paths: [],                      
+        placeholder: '飛宇互联搜索', 
+        noData: '搜索不到!',          
+        depth: 2, 
+      },
+	  count:{
+		countable:true,
+		fontsize:'0.9em',
+		color:'rgb(90,90,90)',
+		language:'chinese'
+	  }
+	  
     }
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+   <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
+
+   <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
+   <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
+	<script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: '21dc4afb1280867ed92b',
+    clientSecret: 'ff555389688ebb3cd42608232445c60c1822aea4',
+    repo: 'fy-connect-api',
+    owner: 'finnfy',
+    admin: ['finnfy'],
+    distractionFreeMode: false
+  })
+</script>
+<script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+<script src="//unpkg.com/docsify-count/dist/countable.js"></script>
 </body>
 </html>
