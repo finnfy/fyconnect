@@ -36,11 +36,19 @@
 
 >http://connect.0fy0.com/oauth2.0/authorize?appid=2022010615&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Ffylogin.action&type=qq
 
+```
+http://connect.0fy0.com/oauth2.0/authorize?appid=2022010615&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Ffylogin.action&type=qq
+```
+
 
 
 - 支付宝登录
 
 >http://connect.0fy0.com/oauth2.0/authorize?appid=2022010615&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Ffylogin.action&type=alipay
+
+```
+http://connect.0fy0.com/oauth2.0/authorize?appid=2022010615&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Ffylogin.action&type=alipay
+```
 
 
 
@@ -48,11 +56,25 @@
 
 > http://connect.0fy0.com/oauth2.0/authorize?appid=2022010615&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Ffylogin.action&type=sina
 
+```
+http://connect.0fy0.com/oauth2.0/authorize?appid=2022010615&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Ffylogin.action&type=sina
+```
+
 
 
 - 百度登录
 
 > http://connect.0fy0.com/oauth2.0/authorize?appid=2022010615&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Ffylogin.action&type=baidu
+
+```
+http://connect.0fy0.com/oauth2.0/authorize?appid=2022010615&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Ffylogin.action&type=baidu
+```
+
+
+
+### 1.2 获取用户信息
+
+
 
 
 
@@ -84,9 +106,15 @@ GET
 >
 > http://connect.0fy0.com/oauth2.0/authorize?appid=2022201018&redirect_uri=https://0fy0.com/return.php&type=baidu
 
+
+
 - QQ登录
 
 >http://connect.0fy0.com/oauth2.0/authorize?appid=2022201018&redirect_uri=https%3A%2F%2F0fy0.com%2Freturn.php&type=qq
+
+```
+http://connect.0fy0.com/oauth2.0/authorize?appid=2022201018&redirect_uri=https%3A%2F%2F0fy0.com%2Freturn.php&type=qq
+```
 
 
 
@@ -94,17 +122,29 @@ GET
 
 >http://connect.0fy0.com/oauth2.0/authorize?appid=2022201018&redirect_uri=https%3A%2F%2F0fy0.com%2Freturn.php&type=alipay
 
+```
+http://connect.0fy0.com/oauth2.0/authorize?appid=2022201018&redirect_uri=https%3A%2F%2F0fy0.com%2Freturn.php&type=alipay
+```
+
 
 
 - 新浪微博登录
 
 > http://connect.0fy0.com/oauth2.0/authorize?appid=2022201018&redirect_uri=https%3A%2F%2F0fy0.com%2Freturn.php&type=sina
 
+```
+http://connect.0fy0.com/oauth2.0/authorize?appid=2022201018&redirect_uri=https%3A%2F%2F0fy0.com%2Freturn.php&type=sina
+```
+
 
 
 - 百度登录
 
 > http://connect.0fy0.com/oauth2.0/authorize?appid=2022201018&redirect_uri=https%3A%2F%2F0fy0.com%2Freturn.php&type=baidu
+
+```
+http://connect.0fy0.com/oauth2.0/authorize?appid=2022201018&redirect_uri=https%3A%2F%2F0fy0.com%2Freturn.php&type=baidu
+```
 
 
 
@@ -150,6 +190,27 @@ GET/POST
 | gender    | int    | 用户性别(1:男,0:女)          |
 | genderStr | String | 用户性别                     |
 | province  | String | 城市(百度登录为用户登录城市) |
+
+
+
+
+
+## 四、公共返回码说明
+
+**公共返回码**
+
+| 错误码 |       含义说明       |
+| :----: | :------------------: |
+|   0    |         成功         |
+|  1001  |         失败         |
+|  1002  |       系统错误       |
+|  1003  |   Token错误或失效    |
+|  1004  |      应用不存在      |
+|  1005  | 应用正在审核或未通过 |
+|  1006  |  缺少参数或参数错误  |
+|  1007  |   redirect_uri错误   |
+|  1008  |   app_key密钥错误    |
+|  1009  |   code错误或已失效   |
 
 
 
