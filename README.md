@@ -81,7 +81,10 @@ http://connect.0fy0.com/oauth2.0/authorize?appid=2022010615&redirect_uri=http%3A
 ## 二、授权登录
 
 **请求地址**：
+
 http://connect.0fy0.com/oauth2.0/authorize
+
+https://connect.0fy0.com/oauth2.0/authorize
 
 **请求方法**：
 GET
@@ -154,7 +157,10 @@ http://connect.0fy0.com/oauth2.0/authorize?appid=2022201018&redirect_uri=https%3
 
 ## 三、获取用户信息
 **请求地址**：
+
 http://connect.0fy0.com/oauth2.0/get_user_info
+
+https://connect.0fy0.com/oauth2.0/get_user_info
 
 **请求方法**：
 GET/POST
@@ -218,6 +224,8 @@ GET/POST
 
 
 
-**注:暂时申请平台还未开发，功能模块已实现**
+**入驻平台**
+- http://connect.yi6.cc (还未开放)
+
 
 需要的请发送邮箱fy@0fy0.com
