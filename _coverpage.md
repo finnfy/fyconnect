@@ -6,5 +6,5 @@
 * 欢迎你的试用
 
 [GitHub](https://github.com/finnfy)
-[Get Started](/README)
+[文档](/README)
 [申请](http://connect.yi6.cc)
