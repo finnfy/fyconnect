@@ -1,10 +1,25 @@
 # 飛宇互联
 
+![飛宇互联](./image/logo.png)
+
+
 > 支付宝、QQ、微博、百度
 >
 > 开发文档:https://finnfy.github.io/fyconnect/
+>
+> 申请平台:http://connect.yi6.cc
+
+
+
+![登录图标](./image/other-login.png)
+
+
 
 开发文档:https://finnfy.github.io/fyconnect/
+
+申请平台:http://connect.yi6.cc
+
+
 
 
 
@@ -96,8 +111,18 @@ GET
 |     参数      | 是否必须 |                             含义                             |
 | :-----------: | :------: | :----------------------------------------------------------: |
 | appid |   必须   |                 飛宇互联应用的appid                 |
-|   redirect_uri   |   必须   |            成功授权后的回调地址，必须是注册appid时填写的主域名下的地址.注意需要将url进行URLEncode            |
+|   redirect_uri   |   必须   |            成功授权后的回调地址，必须是注册appid时填写的主域名下的地址,可带参数.注意需要将url进行URLEncode            |
 | type  |   必须   | 登录方式。"qq"或"alipay"或"sina"或"baidu" |
+
+**返回说明：**
+
+如果用户成功登录并授权，则会跳转到指定的回调地址，并在redirect_uri地址后带上Authorization Code和自己自定义参数。如：
+
+```
+https://0fy0.com/return.php?code=AZF************************Y1FG&flag=1
+```
+
+
 
 ### **2.1示例**
 
@@ -111,9 +136,12 @@ GET
 
 
 
-- QQ登录
+
+- QQ登录-不带参数
 
 >http://connect.0fy0.com/oauth2.0/authorize?appid=2022201018&redirect_uri=https%3A%2F%2F0fy0.com%2Freturn.php&type=qq
+
+
 
 ```
 http://connect.0fy0.com/oauth2.0/authorize?appid=2022201018&redirect_uri=https%3A%2F%2F0fy0.com%2Freturn.php&type=qq
@@ -121,17 +149,56 @@ http://connect.0fy0.com/oauth2.0/authorize?appid=2022201018&redirect_uri=https%3
 
 
 
-- 支付宝登录
+- QQ登录-带参数
+
+>http://connect.0fy0.com/oauth2.0/authorize?appid=2022010615&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Ffylogin.action%3Fflag%3D1&type=qq
+
+
+
+
+```
+http://connect.0fy0.com/oauth2.0/authorize?appid=2022010615&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Ffylogin.action%3Fflag%3D1&type=qq
+```
+
+
+```
+http://connect.0fy0.com/oauth2.0/authorize?appid=2022010615&redirect_uri=http://localhost:8080/fylogin.action?flag=1&type=qq
+```
+
+
+
+- 支付宝登录-不带参数
+
 
 >http://connect.0fy0.com/oauth2.0/authorize?appid=2022201018&redirect_uri=https%3A%2F%2F0fy0.com%2Freturn.php&type=alipay
+
 
 ```
 http://connect.0fy0.com/oauth2.0/authorize?appid=2022201018&redirect_uri=https%3A%2F%2F0fy0.com%2Freturn.php&type=alipay
 ```
 
 
+- 支付宝登录-带参数
 
-- 新浪微博登录
+>http://connect.0fy0.com/oauth2.0/authorize?appid=2022010615&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Ffylogin.action%3Fflag%3D1&type=alipay
+
+
+
+
+```
+http://connect.0fy0.com/oauth2.0/authorize?appid=2022010615&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Ffylogin.action%3Fflag%3D1&type=alipay
+```
+
+
+```
+http://connect.0fy0.com/oauth2.0/authorize?appid=2022010615&redirect_uri=http://localhost:8080/fylogin.action?flag=1&type=alipay
+```
+
+
+
+
+
+- 新浪微博登录-不带参数
 
 > http://connect.0fy0.com/oauth2.0/authorize?appid=2022201018&redirect_uri=https%3A%2F%2F0fy0.com%2Freturn.php&type=sina
 
@@ -141,12 +208,52 @@ http://connect.0fy0.com/oauth2.0/authorize?appid=2022201018&redirect_uri=https%3
 
 
 
-- 百度登录
+- 新浪微博登录-带参数
+
+> http://connect.0fy0.com/oauth2.0/authorize?appid=2022010615&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Ffylogin.action%3Fflag%3D1&type=sina
+
+
+
+
+```
+http://connect.0fy0.com/oauth2.0/authorize?appid=2022010615&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Ffylogin.action%3Fflag%3D1&type=sina
+```
+
+
+```
+http://connect.0fy0.com/oauth2.0/authorize?appid=2022010615&redirect_uri=http://localhost:8080/fylogin.action?flag=1&type=sina
+```
+
+
+
+
+
+
+
+- 百度登录-不带参数
 
 > http://connect.0fy0.com/oauth2.0/authorize?appid=2022201018&redirect_uri=https%3A%2F%2F0fy0.com%2Freturn.php&type=baidu
 
 ```
 http://connect.0fy0.com/oauth2.0/authorize?appid=2022201018&redirect_uri=https%3A%2F%2F0fy0.com%2Freturn.php&type=baidu
+```
+
+
+
+- 百度登录-带参数
+
+> http://connect.0fy0.com/oauth2.0/authorize?appid=2022010615&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Ffylogin.action%3Fflag%3D1&type=baidu
+
+
+
+
+```
+http://connect.0fy0.com/oauth2.0/authorize?appid=2022010615&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Ffylogin.action%3Fflag%3D1&type=baidu
+```
+
+
+```
+http://connect.0fy0.com/oauth2.0/authorize?appid=2022010615&redirect_uri=http://localhost:8080/fylogin.action?flag=1&type=baidu
 ```
 
 
@@ -217,6 +324,44 @@ GET/POST
 |  1007  |   redirect_uri错误   |
 |  1008  |   app_key密钥错误    |
 |  1009  |   code错误或已失效   |
+|  1010  |     应用不属于你     |
+
+
+
+
+
+## 五、图标使用
+![登录图标](./image/other-login.png)
+
+
+
+
+
+```css
+.qq,.alipay,.sina,.baidu,.weixin{
+    width: 20px;
+    height: 20px;
+    display: block;
+    overflow: hidden;
+    background: url(https://image.0fy0.com/static/user/finn/connect/other-login.png) no-repeat;
+}
+.qq{
+    background-position: 0px 0px;
+}
+.alipay{
+    background-position: -20px 0px;
+}
+.sina{
+    background-position: -40px 0px;
+}
+.baidu{
+    background-position: -60px 0px;
+}
+.weixin{
+    background-position: -80px 0px;
+}
+```
+
 
 
 
@@ -225,7 +370,10 @@ GET/POST
 
 
 **入驻平台**
-- http://connect.yi6.cc (还未开放)
+
+- http://connect.yi6.cc
+
+
 
 
 需要的请发送邮箱fy@0fy0.com

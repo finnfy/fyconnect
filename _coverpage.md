@@ -7,3 +7,4 @@
 
 [GitHub](https://github.com/finnfy)
 [Get Started](/README)
+[申请](http://connect.yi6.cc)
