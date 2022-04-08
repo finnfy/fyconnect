@@ -3,7 +3,7 @@
 ![飛宇互联](./image/logo.png)
 
 
-> 支付宝、QQ、微博、百度
+> 支付宝、QQ、微博、百度、微信
 >
 > 开发文档:https://finnfy.github.io/fyconnect/
 >
@@ -87,6 +87,18 @@ http://connect.0fy0.com/oauth2.0/authorize?appid=2022010615&redirect_uri=http%3A
 
 
 
+- 微信登录
+
+> http://connect.0fy0.com/oauth2.0/authorize?appid=2022010615&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Ffylogin.action&type=weixin
+
+```
+http://connect.0fy0.com/oauth2.0/authorize?appid=2022010615&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Ffylogin.action&type=weixin
+```
+
+
+
+
+
 ### 1.2 获取用户信息
 
 
@@ -133,6 +145,8 @@ https://0fy0.com/return.php?code=AZF************************Y1FG&flag=1
 > http://connect.0fy0.com/oauth2.0/authorize?appid=2022201018&redirect_uri=https://0fy0.com/return.php&type=sina
 >
 > http://connect.0fy0.com/oauth2.0/authorize?appid=2022201018&redirect_uri=https://0fy0.com/return.php&type=baidu
+>
+> http://connect.0fy0.com/oauth2.0/authorize?appid=2022201018&redirect_uri=https://0fy0.com/return.php&type=weixin
 
 
 
@@ -260,6 +274,36 @@ http://connect.0fy0.com/oauth2.0/authorize?appid=2022010615&redirect_uri=http://
 
 
 
+- 微信登录-不带参数
+
+> http://connect.0fy0.com/oauth2.0/authorize?appid=2022201018&redirect_uri=https%3A%2F%2F0fy0.com%2Freturn.php&type=weixin
+
+```
+http://connect.0fy0.com/oauth2.0/authorize?appid=2022201018&redirect_uri=https%3A%2F%2F0fy0.com%2Freturn.php&type=weixin
+```
+
+
+
+- 微信登录-带参数
+
+> http://connect.0fy0.com/oauth2.0/authorize?appid=2022010615&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Ffylogin.action%3Fflag%3D1&type=weixin
+
+
+
+
+```
+http://connect.0fy0.com/oauth2.0/authorize?appid=2022010615&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Ffylogin.action%3Fflag%3D1&type=weixin
+```
+
+
+```
+http://connect.0fy0.com/oauth2.0/authorize?appid=2022010615&redirect_uri=http://localhost:8080/fylogin.action?flag=1&type=weixin
+```
+
+
+
+
+
 
 
 ## 三、获取用户信息
@@ -325,6 +369,20 @@ GET/POST
 |  1008  |   app_key密钥错误    |
 |  1009  |   code错误或已失效   |
 |  1010  |     应用不属于你     |
+
+
+
+
+
+**微信扫码登录错误码**
+
+| 错误码 |             含义说明             |
+| :----: | :------------------------------: |
+|   0    |             登录成功             |
+|   9    |          二维码获取成功          |
+|   10   |             扫码成功             |
+|   11   | 已失效，请刷新页面重新获取二维码 |
+|  101   |               错误               |
 
 
 
